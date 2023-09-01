@@ -1,0 +1,256 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'BlackOpsOne-Regular';
+    src: url(fonts/BlackOpsOne-Regular.ttf) format(truetype);
+}
+@font-face {
+    font-family: 'outfit';
+    src: url(fonts/Outfit-VariableFont_wght.ttf);
+}
+
+
+#7292F2
+#85AAF2
+#F2DA5E
+#F2AE2E
+
+
+body{
+    width: 100vw;
+    height: 100vh;
+}
+
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px solid;
+    padding: 20px;
+    font-family: outfit;
+    background-color: lightgrey;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7292F2;
+
+    width: 100%;
+    height: 50px;
+    padding: 0px 20px;
+}
+ul{
+    display: flex;
+    gap: 10px;
+    
+}
+li, a{
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+li a:hover{
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.head{
+    width: 100%;
+    border-radius: 0px 0px 20px 20px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 400px 200px 200px;
+    align-items: center;
+    justify-content: center;
+    
+    
+    
+}
+.head img{
+    width: 200px;
+
+}
+.titulo h1{
+    margin-right: 15px;
+    font-family: 'BlackOpsOne-Regular', sans-serif;
+    color: #7292F2;
+    font-size: 3em;
+    text-shadow: 0px 12px 10px black;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: context-menu;
+}
+.titulo p{
+    margin-right: 15px;
+    margin-top: 10px;
+    text-align: center;
+    font-family: outfit;
+    background-color: #7292F2;
+    color:#F2DA5E;
+    text-shadow: 0px -1px 3px black;
+    cursor: context-menu;
+    
+}
+
+.conteudo{
+    width: 90%;
+    padding: 0px 20px;
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-between;
+}
+.fotos{
+    background-color: white;
+    width: 30%;
+    height: 600px;
+    overflow-y: scroll;
+}
+.fotos h4{
+    text-align: center;
+    font-size: 14px;
+    font-family: 'BlackOpsOne-Regular';
+    background-color:#7292F2 ;
+    text-shadow: 0px 1px 2px black;
+    color:#F2DA5E;
+    padding: 5px;
+    position: sticky;
+    top: -1px;
+    cursor: context-menu;
+    
+}
+h3{
+    margin-right: 15px;
+    margin-top: 10px;
+    text-align: center;
+    font-family: outfit;
+    background-color: #7292F2;
+    color:#F2DA5E;
+    text-shadow: 0px -1px 3px black;
+    cursor: context-menu;
+}
+.image img{
+    width: 100%;
+}
+.box{
+    width: 60%;
+    height: 600px;
+    background-color: lightgray;
+    padding-top: 20px;
+    padding-left: 10px;
+    cursor: pointer;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 250px 250px;
+    grid-template-areas:
+    "item1 item2 item5"
+    "item4 item3 item3";
+    gap: 10px;
+}
+.item1{
+    grid-area: item1;
+}
+.item2{
+    grid-area: item2;
+}
+.item3{
+    grid-area: item3;
+}
+.item4{
+    grid-area: item4;
+}
+.item5{
+    grid-area: item5;
+}
+.box0{
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 1px 1.2px 0px #00000073;
+    
+}
+.box0 img{
+    width: 100%;
+    border-radius: 20px;
+}
+.box0 h5{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 14px;
+}
+.box0 p{
+    text-align: center;
+    font-size: 13px;
+}
+.box0:hover{
+    transition: .5s ease;
+    transform: translatey(-10px);
+    box-shadow: 1px 6px 9px 0px #00000073;
+}
+footer{
+    display: flex;
+    justify-content:center;
+    align-items: end;
+    margin-top: 20px;
+    gap: 10px;
+    border-top: 1px solid black;
+    width: 200px;
+}
+footer img:hover{
+    width: 28px;
+}
+
+@media  (max-width:870px) {
+    .head{
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .head img{
+        width: 150px;
+    }
+}
+@media  (max-width:870px) {
+    .box{
+        height: auto;
+        grid-template-areas:
+        "item1 item2"
+        "item4 item5"
+        "item3 item3"
+        ;
+}
+    .box0{
+        width: 200px;
+        height: 250px;
+    }
+
+}
+@media  (max-width:750px) {
+    
+    .box0{
+        width: 150px;
+        height: 200px;
+    }
+
+}
+@media  (max-width:590px) {
+    
+    .box0{
+        width: 120px;
+        height: 220px;
+        
+    }
+    .box{
+        column-gap: 10px;
+    }
+}
